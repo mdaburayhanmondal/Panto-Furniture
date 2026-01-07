@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { FaShoppingCart } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';
@@ -13,13 +13,35 @@ const navItems = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const mobileMenuHandler = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.addEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 ease-in border-b border-white/0 ${
+        isScrolled
+          ? 'bg-white/10 backdrop-blur-sm border-white/10 shadow-md text-black'
+          : 'bg-transparent text-white'
+      }`}
+    >
       <nav className="container mx-auto flex justify-between items-center p-4">
         {/* logo */}
         <div>
@@ -49,7 +71,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? 'text-primary font-bold'
-                      : 'text-white font-normal hover:text-primary hover:font-bold'
+                      : 'font-normal hover:text-primary hover:font-bold'
                   }
                 >
                   {navItem.label}
