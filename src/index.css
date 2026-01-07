@@ -3,30 +3,24 @@
 
 @theme {
     --color-primary: #E58411;
-    /* Define the base colors here */
     --color-secondary: #1E1E1E;
     --color-background: #F7F7F7;
 
     --font-poppins: Poppins, sans-serif;
 }
 
-/* Apply these variables to the body.
-   This ensures the background actually changes when the theme changes.
-*/
 body {
     background-color: var(--color-background);
     color: var(--color-secondary);
     font-family: var(--font-poppins);
-    transition: background-color 0.3s, color 0.3s;
-    /* Optional: Smooth transition */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Override variables when the "dark" class is present.
-   This is crucial for the background to turn dark.
-*/
 .dark {
-    /* Swap the background to dark grey in dark mode */
     --color-background: #1E1E1E;
-    /* Swap the default text to white (or a light grey) in dark mode */
     --color-secondary: #FFFFFF;
+}
+
+.section-default{
+    @apply container mx-auto py-6 px-4;
 }
