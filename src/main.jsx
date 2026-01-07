@@ -4,7 +4,7 @@ import App from './App.jsx';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Home from './pages/home/Home.jsx';
-import Shop from './pages/Shop.jsx';
+import Shop from './pages/shop/Shop.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import ContactUs from './pages/ContactUs.jsx';
 import Cart from './pages/Cart.jsx';
