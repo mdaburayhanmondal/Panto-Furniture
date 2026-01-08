@@ -3,7 +3,7 @@ import Button from '../../components/Button';
 
 export const Box = ({ heading, description }) => {
   const boxStyles =
-    'border rounded-lg p-2 border-gray-300 md:border-gray-100 md:hover:border-gray-200 transition-all duration-300 ease-in dark:border-gray-700';
+    'border rounded-lg p-2 border-gray-300 md:border-gray-200 md:hover:border-gray-300 transition-all duration-300 ease-in dark:border-gray-700';
   return (
     <div
       className={`h-full flex flex-col gap-y-2 text-center md:text-left ${boxStyles}`}
