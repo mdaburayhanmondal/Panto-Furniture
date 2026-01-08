@@ -91,7 +91,16 @@ const Footer = () => {
 
         {/* Bottom Row */}
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-y-4 text-gray-500 dark:text-gray-400">
-          <p className="text-sm">Copyright &copy; {currentYear} Panto</p>
+          <p className="text-sm">
+            Copyright &copy; {currentYear}{' '}
+            <a
+              href="https://rayhanfsdev.netlify.app"
+              target="blank"
+              className="font-extralight italic text-primary"
+            >
+              Abu Rayhan
+            </a>
+          </p>
           <div className="flex gap-x-6 text-sm">
             <Link to="/" className="hover:underline hover:text-primary">
               Terms & Conditions
