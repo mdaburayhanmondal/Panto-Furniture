@@ -11,7 +11,9 @@ const ProductCard = ({ product }) => {
         <div className="flex flex-col">
           <p className="text-xs">{product.category}</p>
           <h4 className="text-base font-semibold">{product.name}</h4>
-          <p>{<Rating rating={product.rating} />}</p>
+          <p>
+            {<Rating rating={product.rating} starClass={'cursor-pointer'} />}
+          </p>
         </div>
         <div className="w-full flex items-center justify-between ">
           <p className="text-lg text-secondary font-semibold">
