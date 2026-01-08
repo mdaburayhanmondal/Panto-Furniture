@@ -23,7 +23,7 @@ const Products = ({ headline }) => {
         </h2>
         {/* categories */}
         <div className="bg-[#EEEEEE] dark:bg-white/10 w-fit mx-auto rounded-full px-6 py-3">
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-1 md:gap-x-4">
             {categories.map((category) => (
               <button
                 onClick={() => {
@@ -31,7 +31,7 @@ const Products = ({ headline }) => {
                   setVisibleProducts(4);
                 }}
                 key={category}
-                className={` px-4 py-2 rounded-4xl transition-all ease-in-out duration-300 cursor-pointer text-primary hover:text-primary/66 ${
+                className={`w-fit px-2 py-1 md:px-4 md:py-2 rounded-4xl transition-all ease-in-out duration-300 cursor-pointer text-primary hover:text-primary/66 ${
                   currentCategory === category
                     ? 'bg-white hover:bg-white dark:bg-gray-700 dark:hover:bg-gray-700'
                     : 'text-secondary hover:bg-white/50 dark:text-gray-300 dark:hover:bg-white/5'
