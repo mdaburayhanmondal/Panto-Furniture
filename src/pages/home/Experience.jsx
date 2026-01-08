@@ -6,7 +6,11 @@ const Experience = () => {
   return (
     <section className="section-default my-24 flex flex-col md:flex-row items-center justify-between md:gap-12">
       <div className="md:w-1/2 md:h-135">
-        <img src={experiences} alt="experiences" className="w-full" />
+        <img
+          src={experiences}
+          alt="experiences"
+          className="w-full backdrop-blur-xs opacity-75 hover:opacity-100 transition-all duration-300 ease-in cursor-pointer"
+        />
       </div>
       <div className="md:w-1/2 w-full mx-auto flex flex-col gap-y-4">
         <h3 className="text-lg uppercase font-semibold text-primary">
