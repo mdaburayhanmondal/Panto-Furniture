@@ -3,7 +3,7 @@ import buttonArray from '../assets/button-icon.png';
 
 const Button = ({ buttonText }) => {
   return (
-    <button className="w-fit text-sm text-primary flex items-center cursor-pointer hover:-translate-y-2 transition-all duration-300 ease-in group underline underline-offset-4 hover:decoration-transparent px-2 py-1">
+    <button className="w-fit text-sm text-primary flex items-center cursor-pointer hover:-translate-y-2 transition-all duration-300 ease-in group underline underline-offset-4 hover:decoration-transparent py-1">
       {buttonText}
       <img
         src={buttonArray}
