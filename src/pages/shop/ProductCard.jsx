@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
   // addToCart from CartContext
   const { addToCart } = useCart();
   return (
-    <div className="flex flex-col items-start gap-y-2 rounded-t-xl cursor-pointer">
+    <div className="flex flex-col items-start gap-y-2 rounded-xl cursor-pointer shadow hover:shadow-xs hover:shadow-primary transition-shadow duration-300 ease-in">
       <img
         src={getImgUrl(`${product.imageUrl}`)}
         alt={product.name}
