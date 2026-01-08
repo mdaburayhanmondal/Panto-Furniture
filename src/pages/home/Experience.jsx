@@ -12,10 +12,10 @@ const Experience = () => {
         <h3 className="text-lg uppercase font-semibold text-primary">
           Experiences
         </h3>
-        <h2 className="text-4xl font-bold capitalize">
+        <h2 className="text-4xl font-bold capitalize leading-12">
           we provide you the best experience
         </h2>
-        <p className="text-secondary">
+        <p className="text-secondary font-extralight tracking-wide text-sm">
           You don’t have to worry about the result because all of these
           interiors are made by people who are professionals in their fields
           with an elegant and lucurious style and with premium quality materials
