@@ -8,6 +8,7 @@ import Shop from './pages/shop/Shop.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import ContactUs from './pages/ContactUs.jsx';
 import Cart from './pages/Cart.jsx';
+import Swal from 'sweetalert2';
 
 createRoot(document.getElementById('root')).render(
   <ThemeProvider>

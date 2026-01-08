@@ -2,8 +2,11 @@ import React from 'react';
 import { getImgUrl } from '../../utils/getImgUrl';
 import { IoIosAdd } from 'react-icons/io';
 import Rating from '../../components/Rating';
+import { useCart } from '../../context/CartContext';
 
 const ProductCard = ({ product }) => {
+  // addToCart from CartContext
+  const { addToCart } = useCart();
   return (
     <div className="flex flex-col items-start gap-y-2 rounded-t-xl cursor-pointer">
       <img src={getImgUrl(`${product.imageUrl}`)} alt={product.name} />
@@ -21,7 +24,10 @@ const ProductCard = ({ product }) => {
             {product.price}
           </p>
           <button className="cursor-pointer bg-secondary rounded-full hover:scale-105">
-            <IoIosAdd className="text-2xl text-white dark:text-black" />
+            <IoIosAdd
+              onClick={() => addToCart(product)}
+              className="text-2xl text-white dark:text-black"
+            />
           </button>
         </div>
       </div>

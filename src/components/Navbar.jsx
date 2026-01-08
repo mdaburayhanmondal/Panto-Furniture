@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa6';
 import { IoClose } from 'react-icons/io5';
 import { useTheme } from '../context/ThemeContext';
 import { BsMoon, BsSun } from 'react-icons/bs';
+import { useCart } from '../context/CartContext';
 
 const navItems = [
   { path: '/', label: 'Furniture' },
@@ -33,6 +34,9 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // cartCount from context
+  const { cartCount } = useCart();
 
   return (
     <header
@@ -116,7 +120,7 @@ const Navbar = () => {
         <div className="hidden md:block relative text-gray-600 dark:text-white hover:text-primary cursor-pointer">
           <FaShoppingCart className="text-xl" />
           <sup className="absolute -top-3 -right-3 bg-primary text-white size-4 p-1 rounded-full flex items-center justify-center text-xs">
-            0
+            {cartCount}
           </sup>
         </div>
       </nav>
