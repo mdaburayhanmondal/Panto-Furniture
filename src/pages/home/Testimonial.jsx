@@ -64,7 +64,10 @@ const Testimonial = () => {
                   <p className="mb-3 text-xs">Verified Customer</p>
                   <p className="text-gray-500">"{review.review}"</p>
                   <div className="mx-auto w-full flex justify-center items-center">
-                    <Rating rating={review.rating} c />
+                    <Rating
+                      rating={review.rating}
+                      starClass={'cursor-default'}
+                    />
                   </div>
                 </div>
               </div>

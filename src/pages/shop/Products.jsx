@@ -52,7 +52,7 @@ const Products = ({ headline }) => {
         {visibleProducts < filterProducts.length && (
           <button
             onClick={showMoreProducts}
-            className="bg-white px-3 py-1 w-fit mx-auto rounded-xl shadow cursor-pointer"
+            className="bg-white px-3 py-1 w-fit mx-auto rounded-xl shadow cursor-pointer hover:shadow hover:shadow-primary transition-all duration-200 ease-in"
           >
             Show More
           </button>
