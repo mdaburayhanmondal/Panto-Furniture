@@ -9,6 +9,7 @@ const Experience = () => {
         <img
           src={experiences}
           alt="experiences"
+          loading="lazy"
           className="w-full backdrop-blur-xs opacity-75 hover:opacity-100 transition-all duration-300 ease-in cursor-pointer"
         />
       </div>

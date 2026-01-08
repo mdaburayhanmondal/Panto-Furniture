@@ -9,7 +9,11 @@ const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
   return (
     <div className="flex flex-col items-start gap-y-2 rounded-t-xl cursor-pointer">
-      <img src={getImgUrl(`${product.imageUrl}`)} alt={product.name} />
+      <img
+        src={getImgUrl(`${product.imageUrl}`)}
+        alt={product.name}
+        loading="lazy"
+      />
       <div className="w-full bg-white dark:bg-darkBg px-3 py-1 rounded-b-xl flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-1">
           <p className="text-xs">{product.category}</p>

@@ -8,6 +8,7 @@ const Button = ({ buttonText }) => {
       <img
         src={buttonArray}
         alt=""
+        loading="lazy"
         className="group-hover:translate-x-1 hover:translate-y-0 transition-all duration-300 ease-in opacity-0 -translate-x-8 group-hover:opacity-100"
       />
     </button>

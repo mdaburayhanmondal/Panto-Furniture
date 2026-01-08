@@ -32,17 +32,20 @@ const Material = () => {
       >
         <img
           src={material1}
-          alt="experiences"
+          alt="furniture"
+          loading="lazy"
           className="object-fill rounded-4xl"
         />
         <img
           src={material3}
-          alt="experiences"
+          alt="furniture"
+          loading="lazy"
           className="object-contain row-span-2"
         />
         <img
           src={material2}
-          alt="experiences"
+          alt="furniture"
+          loading="lazy"
           className="object-fill rounded-4xl"
         />
       </div>

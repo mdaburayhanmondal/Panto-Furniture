@@ -51,6 +51,7 @@ const AboutUs = () => {
           <img
             src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800"
             alt="Panto Interior"
+            loading="lazy"
             className="rounded-2xl w-full h-96 object-cover opacity-90"
           />
         </div>

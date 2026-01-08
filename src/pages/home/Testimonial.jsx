@@ -57,6 +57,7 @@ const Testimonial = () => {
                 <img
                   src={review.image}
                   alt={review.name}
+                  loading="lazy"
                   className="size-20 absolute -top-8 left-1/2 -translate-x-1/2 bg-white dark:bg-secondary p-2 rounded-full ring ring-primary"
                 />
                 <div className="mt-16 text-center">
