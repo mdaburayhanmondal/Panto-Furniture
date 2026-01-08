@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: var(--color-background);
+    background-color: white;
     color: var(--color-secondary);
     font-family: var(--font-poppins);
     transition: background-color 0.3s ease, color 0.3s ease;
