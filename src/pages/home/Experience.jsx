@@ -4,7 +4,7 @@ import Button from '../../components/Button';
 
 const Experience = () => {
   return (
-    <section className="section-default my-24 flex flex-col md:flex-row items-center justify-between md:gap-12">
+    <section className="my-24 flex flex-col md:flex-row items-center justify-between md:gap-12 pr-10">
       <div className="md:w-1/2 md:h-135">
         <img
           src={experiences}
