@@ -6,7 +6,6 @@ import Material from './home/Material';
 const AboutUs = () => {
   return (
     <section className="transition-colors duration-300">
-      {/* Banner with Glassmorphism */}
       <div
         className="w-full h-100 bg-no-repeat bg-center bg-cover flex items-center justify-center text-white"
         style={{ backgroundImage: `url(${aboutBackground})` }}
@@ -19,7 +18,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Content Section using your theme variables */}
       <div className="section-default grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-20">
         <div className="space-y-6">
           <h3 className="text-lg uppercase font-semibold text-primary">

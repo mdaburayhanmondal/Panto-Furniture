@@ -5,7 +5,6 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 const ContactUs = () => {
   return (
     <section className="min-h-screen">
-      {/* Banner */}
       <div
         className="w-full h-80 bg-no-repeat bg-center bg-cover flex items-center justify-center text-white relative"
         style={{ backgroundImage: `url(${contactBackground})` }}
@@ -18,7 +17,6 @@ const ContactUs = () => {
 
       <div className="section-default my-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          {/* Info Side */}
           <div className="space-y-8">
             <div>
               <h3 className="text-lg uppercase font-semibold text-primary mb-2">
@@ -59,7 +57,7 @@ const ContactUs = () => {
             </div>
           </div>
 
-          {/* Form Side - Optimized for your Dark Mode logic */}
+          {/* Form */}
           <div className="bg-darkerBackground dark:bg-darkBg p-10 rounded-3xl border border-gray-200 dark:border-white/5 shadow-xl">
             <form className="flex flex-col gap-y-6">
               <input
