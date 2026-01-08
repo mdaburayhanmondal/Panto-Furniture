@@ -4,13 +4,17 @@
 @theme {
     --color-primary: #E58411;
     --color-secondary: #1E1E1E;
+    --color-darkBg: #1b1b1b;
     --color-background: #F7F7F7;
+    --color-darkerBackground: #ECECEC;
 
     --font-poppins: Poppins, sans-serif;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
-    background-color: white;
+    background-color: var(--color-background);
     color: var(--color-secondary);
     font-family: var(--font-poppins);
     transition: background-color 0.3s ease, color 0.3s ease;

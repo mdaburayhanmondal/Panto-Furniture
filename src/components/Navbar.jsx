@@ -38,8 +38,8 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 ease-in border-b border-white/0 ${
         isScrolled
-          ? 'bg-white/10 backdrop-blur-sm border-white/10 shadow-md text-black'
-          : 'bg-transparent text-gray-600'
+          ? 'bg-white/10 dark:bg-black/80 dark:text-white backdrop-blur-sm border-white/10 shadow-md text-black'
+          : 'bg-transparent text-gray-600 dark:text-gray-200'
       }`}
     >
       <nav className="container mx-auto flex justify-between items-center p-4">
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div>
           <Link
             to={'/'}
-            className="font-bold font-poppins text-2xl text-gray-600"
+            className="font-bold font-poppins text-2xl text-primary"
           >
             Panto
           </Link>
@@ -113,7 +113,7 @@ const Navbar = () => {
         </div>
 
         {/* cart */}
-        <div className="hidden md:block relative text-gray-600 hover:text-primary cursor-pointer">
+        <div className="hidden md:block relative text-gray-600 dark:text-white hover:text-primary cursor-pointer">
           <FaShoppingCart className="text-xl" />
           <sup className="absolute -top-3 -right-3 bg-primary text-white size-4 p-1 rounded-full flex items-center justify-center text-xs">
             0

@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 
 const Testimonial = () => {
   return (
-    <section className="section-default">
+    <section className="section-default flex flex-col gap-y-6">
       <div className="md:w-1/2 w-full mx-auto flex flex-col gap-y-2">
         <h3 className="text-lg uppercase font-semibold text-primary text-center">
           Materials
@@ -53,16 +53,18 @@ const Testimonial = () => {
             className="bg-no-repeat bg-cover bg-center rounded-lg"
           >
             <div className="h-120 flex flex-col justify-center items-center mb-4">
-              <div className="mt-16 mb-4 bg-white border border-primary rounded-xl md:w-4/5 w-full p-4 relative">
+              <div className="mt-16 mb-4 bg-white dark:bg-darkBg border border-primary rounded-xl md:w-4/5 w-full p-4 relative">
                 <img
                   src={review.image}
                   alt={review.name}
-                  className="size-20 absolute -top-8 left-1/2 -translate-x-1/2 bg-white p-2 rounded-full ring ring-primary"
+                  className="size-20 absolute -top-8 left-1/2 -translate-x-1/2 bg-white dark:bg-secondary p-2 rounded-full ring ring-primary"
                 />
                 <div className="mt-16 text-center">
                   <p className="text-lg font-semibold">{review.name}</p>
                   <p className="mb-3 text-xs">Verified Customer</p>
-                  <p className="text-gray-500">"{review.review}"</p>
+                  <p className="text-gray-500 dark:text-gray-400">
+                    "{review.review}"
+                  </p>
                   <div className="mx-auto w-full flex justify-center items-center">
                     <Rating
                       rating={review.rating}

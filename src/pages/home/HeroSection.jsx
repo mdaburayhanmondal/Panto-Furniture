@@ -28,7 +28,7 @@ const HeroSection = () => {
       </div>
 
       {/* banner blur effect */}
-      <div className="absolute inset-x-0 bottom-0 h-3/4 -mb-2 bg-linear-to-t from-white via-transparent to-transparent blur-sm" />
+      <div className="absolute inset-x-0 bottom-0 h-3/4 -mb-2 bg-linear-to-t from-white dark:from-secondary via-transparent to-transparent blur-sm" />
       {/* hot spot 1 */}
       <div className="hidden lg:block absolute bottom-46 left-20">
         <Tooltip position="bottom" />
