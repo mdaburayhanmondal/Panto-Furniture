@@ -3,6 +3,8 @@ import { Link, NavLink } from 'react-router';
 import { FaShoppingCart } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';
 import { IoClose } from 'react-icons/io5';
+import { useTheme } from '../context/ThemeContext';
+import { BsMoon, BsSun } from 'react-icons/bs';
 
 const navItems = [
   { path: '/', label: 'Furniture' },
@@ -14,6 +16,7 @@ const navItems = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const mobileMenuHandler = () => {
     setIsMenuOpen((prevState) => !prevState);
@@ -21,16 +24,13 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
+
     return () => {
-      window.addEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -39,7 +39,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 ease-in border-b border-white/0 ${
         isScrolled
           ? 'bg-white/10 backdrop-blur-sm border-white/10 shadow-md text-black'
-          : 'bg-transparent text-white'
+          : 'bg-transparent text-gray-600'
       }`}
     >
       <nav className="container mx-auto flex justify-between items-center p-4">
@@ -53,6 +53,22 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* dark/light mode switch - small device */}
+        <div
+          onClick={toggleTheme}
+          className={`md:hidden z-50 focus:outline-0 font-bold text-sm p-2 rounded-full transition-colors duration-300 ease-in bg-black ${
+            theme === 'dark'
+              ? 'text-black shadow-md shadow-yellow-300'
+              : 'shadow-md shadow-blue-300 text-white'
+          }`}
+        >
+          {theme === 'dark' ? (
+            <BsSun className="text-yellow-500" />
+          ) : (
+            <BsMoon className="text-blue-200" />
+          )}
+        </div>
+
         {/* mobile menu toggle button */}
         <button
           onClick={mobileMenuHandler}
@@ -62,7 +78,7 @@ const Navbar = () => {
         </button>
 
         {/* desktop menu */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex gap-x-10 items-center">
           <ul className="flex flex-col items-center md:flex-row space-y-10 md:space-y-0 md:space-x-8">
             {navItems.map((navItem, index) => (
               <li key={index}>
@@ -79,6 +95,21 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          {/* dark/light mode switch - larger device */}
+          <div
+            onClick={toggleTheme}
+            className={`hidden md:block z-50 focus:outline-0 font-bold text-sm p-2 rounded-full transition-all duration-300 ease-in bg-black cursor-pointer ${
+              theme === 'dark'
+                ? 'text-black shadow hover:shadow-md shadow-yellow-300 hover:shadow-blue-300'
+                : 'shadow hover:shadow-md shadow-blue-300 hover:shadow-yellow-300 text-white'
+            }`}
+          >
+            {theme === 'dark' ? (
+              <BsSun className="text-yellow-500" />
+            ) : (
+              <BsMoon className="text-blue-200" />
+            )}
+          </div>
         </div>
 
         {/* cart */}
