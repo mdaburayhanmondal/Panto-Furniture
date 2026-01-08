@@ -2,7 +2,7 @@ import React from 'react';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { CiStar } from 'react-icons/ci';
 
-const Rating = ({ rating }) => {
+const Rating = ({ rating, starClass }) => {
   const totalStars = 5;
 
   return (
@@ -10,7 +10,7 @@ const Rating = ({ rating }) => {
       {Array.from({ length: totalStars }, (_, index) => {
         const number = index + 0.5;
         return (
-          <span key={index} className="cursor-pointer">
+          <span key={index} className={`${starClass}`}>
             {rating >= index + 1 ? (
               <FaStar className="text-yellow-500" />
             ) : rating >= number ? (
