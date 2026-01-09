@@ -4,7 +4,7 @@ import Button from '../../components/Button';
 
 const Experience = () => {
   return (
-    <section className="my-24 flex flex-col md:flex-row items-center justify-between md:gap-12 pr-10">
+    <section className="my-24 flex flex-col md:flex-row items-center justify-between md:gap-12 pr-4 md:pr-0">
       <div className="md:w-1/2 md:h-135">
         <img
           src={experiences}
@@ -13,7 +13,7 @@ const Experience = () => {
           className="w-full backdrop-blur-xs opacity-75 hover:opacity-100 transition-all duration-300 ease-in cursor-pointer"
         />
       </div>
-      <div className="pl-5 md:pl-0 md:w-1/2 w-full mx-auto flex flex-col gap-y-4">
+      <div className="pl-4 md:pl-0 md:w-1/2 w-full mx-auto flex flex-col gap-y-4">
         <h3 className="text-lg uppercase font-semibold text-primary">
           Experiences
         </h3>

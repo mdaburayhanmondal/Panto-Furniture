@@ -7,7 +7,7 @@ import material3 from '../../assets/material3.png';
 const Material = () => {
   return (
     <section className="my-24 flex flex-col md:flex-row items-center justify-between gap-y-6 md:gap-y-0 md:gap-12">
-      <div className="pl-5 md:pr-0 md:w-1/2 w-full mx-auto flex flex-col gap-y-4">
+      <div className="pl-4 md:pl-0 md:w-1/2 w-full mx-auto flex flex-col gap-y-4">
         <h3 className="text-lg uppercase font-semibold text-primary">
           Materials
         </h3>
