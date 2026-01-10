@@ -21,9 +21,9 @@ const HeroSection = () => {
           <input
             type="text"
             placeholder="Search furniture..."
-            className="w-[90%] md:w-90 px-6 py-3 bg-white/15 rounded-full outline-1 outline-white/50 focus:outline-primary"
+            className="w-[90%] z-100 md:w-90 px-6 py-3 bg-white/15 rounded-full outline-1 outline-white/50 focus:outline-primary"
           />
-          <FiSearch className="text-4xl bg-primary hover:shadow hover:shadow-primary cursor-pointer p-1 rounded-full -ml-10" />
+          <FiSearch className="z-100 text-4xl bg-primary hover:shadow hover:shadow-primary cursor-pointer p-1 rounded-full -ml-10" />
         </div>
       </div>
 
