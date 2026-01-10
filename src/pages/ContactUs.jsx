@@ -63,19 +63,19 @@ const ContactUs = () => {
               <input
                 type="text"
                 placeholder="Full Name"
-                className="bg-background dark:bg-white/5 p-4 rounded-xl outline-primary border border-gray-200 dark:border-white/10 text-secondary"
+                className="bg-background dark:bg-white/5 p-4 rounded-xl border-0 focus:outline-1 focus:outline-primary  text-secondary"
               />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="bg-background dark:bg-white/5 p-4 rounded-xl outline-primary border border-gray-200 dark:border-white/10 text-secondary"
+                className="bg-background dark:bg-white/5 p-4 rounded-xl border-0 focus:outline-1 focus:outline-primary  text-secondary"
               />
               <textarea
                 rows="4"
                 placeholder="Your Message"
-                className="bg-background dark:bg-white/5 p-4 rounded-xl outline-primary border border-gray-200 dark:border-white/10 text-secondary resize-none"
+                className="bg-background dark:bg-white/5 p-4 rounded-xl border-0 focus:outline-1 focus:outline-primary  text-secondary resize-none"
               />
-              <button className="bg-primary text-white font-bold py-4 rounded-xl hover:bg-opacity-90 transition-all">
+              <button className="bg-primary text-white font-bold py-4 rounded-xl hover:bg-transparent hover:outline-primary hover:outline-1 hover:text-black dark:hover:text-white cursor-pointer transition-all duration-300 ease-in">
                 Send Message
               </button>
             </form>
