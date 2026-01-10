@@ -88,13 +88,27 @@ const Navbar = () => {
               <li key={index}>
                 <NavLink
                   to={navItem.path}
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'text-primary font-bold'
-                      : 'font-normal hover:text-primary hover:font-bold'
-                  }
+                  className={({ isActive }) => `
+    relative py-2 transition-colors duration-300 group
+    ${
+      isActive
+        ? 'text-primary font-semibold'
+        : 'text-gray-400 hover:text-primary'
+    }
+  `}
                 >
-                  {navItem.label}
+                  {({ isActive }) => (
+                    <>
+                      {navItem.label}
+                      {/* Animated Underline Element */}
+                      <span
+                        className={`
+          absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ease-out
+          ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
+        `}
+                      />
+                    </>
+                  )}
                 </NavLink>
               </li>
             ))}
