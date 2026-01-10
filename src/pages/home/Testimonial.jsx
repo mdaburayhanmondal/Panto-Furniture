@@ -53,7 +53,7 @@ const Testimonial = () => {
             className="bg-no-repeat bg-cover bg-center rounded-lg"
           >
             <div className="h-120 flex flex-col justify-center items-center mb-4">
-              <div className="mt-16 mb-4 bg-white dark:bg-darkBg border border-primary rounded-xl md:w-4/5 w-full p-4 relative">
+              <div className="mt-16 mb-4 bg-primary/10 backdrop-blur-xs dark:bg-darkBg/50 border border-primary/40 rounded-xl p-4 relative w-full md:w-4/5 shadow-[0_0_20px_#E5841166] hover:shadow-[0_0_30px_#E5841190] transition-all duration-300 group">
                 <img
                   src={review.image}
                   alt={review.name}
@@ -61,9 +61,11 @@ const Testimonial = () => {
                   className="size-20 absolute -top-8 left-1/2 -translate-x-1/2 bg-white dark:bg-secondary p-2 rounded-full ring ring-primary"
                 />
                 <div className="mt-16 text-center">
-                  <p className="text-lg font-semibold">{review.name}</p>
-                  <p className="mb-3 text-xs">Verified Customer</p>
-                  <p className="text-gray-500 dark:text-gray-400">
+                  <p className="text-lg text-white font-semibold">
+                    {review.name}
+                  </p>
+                  <p className="mb-3 text-white text-xs">Verified Customer</p>
+                  <p className="text-gray-200 dark:text-gray-400">
                     "{review.review}"
                   </p>
                   <div className="mx-auto w-full flex justify-center items-center">
